@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="login-screen" class="login-container">
+    <h2>Login to Start the Quiz</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Enter your name" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <div id="quiz-content" style="display: none;">
+  <button id="logout-btn" style="position: absolute; top: 20px; left: 20px;">Logout</button>
+
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="quiz-container">
+    <div class="progress-bar">
+      <div id="progress-fill"></div>
+    </div>
+    <h1 id="quiz-title">Quiz Time!</h1>
+    <div id="timer">Time Left: <span id="time-left">15</span>s</div>
+    <div id="quiz-body">
+      
+      <h2>Select a Quiz Topic</h2>
+      <div id="category-select" class="card-container">
+        
+        <div class="card">
+          <h4 class="topic-title">General Knowledge</h4>
+          <p class="topic-desc">Expand your horizons with questions from history, geography, science, politics, culture, and more. A great mix for curious minds who love to learn about the world around them.</p>
+          <button onclick="startQuiz('General_Knowledge')">Start Quiz</button>
+        </div>
+        
+        <div class="card">
+          <h4 class="topic-title">Movies</h4>
+          <p class="topic-desc">Dive into the cinematic universe! Explore trivia from classic blockbusters, famous actors, Oscar winners, memorable quotes, and iconic scenes from Hollywood to Bollywood.</p>
+          <button onclick="startQuiz('Movies')">Start Quiz</button>
+        </div>
+        
+        <div class="card">
+          <h4 class="topic-title">Sports</h4>
+          <p class="topic-desc">Test your knowledge across the world of sports — from legendary athletes and records to rules, events, and historic moments in games like football, cricket, basketball, and more.</p>
+          <button onclick="startQuiz('Sports')">Start Quiz</button>
+        </div>
+      
+        <div class="card">
+          <h4 class="topic-title">Art</h4>
+          <p class="topic-desc">Explore the world of creativity! Answer questions about famous paintings, artists, styles, and art history from around the globe.</p>
+          <button onclick="startQuiz('Art')">Start Quiz</button>
+        </div>
+
+        <div class="card">
+          <h4 class="topic-title">Science And Nature</h4>
+          <p class="topic-desc">Discover the wonders of science and the natural world! From animals and plants to space and inventions — test how much you know.</p>
+          <button onclick="startQuiz('Science_and_nature')">Start Quiz</button>
+        </div>
+
+        <div class="card">
+          <h4 class="topic-title">Anime</h4>
+          <p class="topic-desc">Test your knowledge of popular anime shows, characters, and stories. From old favorites to new hits — see how much of an anime fan you really are!</p>
+          <button onclick="startQuiz('Anime')">Start Quiz</button>
+        </div>
+        
+        <div class="card">
+          <h4 class="topic-title">Mathematics</h4>
+          <p class="topic-desc">Put your math skills to the test! Solve questions on numbers, equations, geometry, and more — perfect for quick thinking and sharp minds</p>
+          <button onclick="startQuiz('Mathematics')">Start Quiz</button>
+        </div>
+        <div class="card">
+          <h4 class="topic-title">Gadgets</h4>
+          <p class="topic-desc">Quiz yourself on cool tech — from phones to wearables and all the latest gadgets!</p>
+          <button onclick="startQuiz('Gadgets')">Start Quiz</button>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
